@@ -1,0 +1,21 @@
+<div class="text-center">
+  <form class="form-signin">
+    <img class="mb-4" src="#" alt="Destino" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Encuentra sin buscar</h1>
+    <div *ngIf="!register">
+      <input type="email" id="emailTxt" class="form-control" placeholder="Correo electrónico" required="" autofocus="">
+      <input type="password" id="passwordTxt" class="form-control" placeholder="Contraseña" required="" autofocus="">
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Inicio automático
+        </label>
+      </div>
+      <button class="btn btn-lg btn-danger btn-block" type="submit">Inicia sesión</button>
+      <button class="btn btn-lg btn-outline-danger btn-block" type="button" (click)="register = true">Registrate</button>
+    </div>
+    <div *ngIf="register">
+        <button class="btn btn-lg btn-outline-danger btn-block" type="button" (click)="register = false">Cancelar</button>
+    </div>
+    <p class="mt-5 mb-3 text-muted">© Destino 2018</p>
+  </form>
+</div>
